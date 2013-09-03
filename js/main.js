@@ -23,5 +23,9 @@ $(document).ready(function (){
 	// 		$('.title-area .name').addClass('esconde');
 	// 	}
 	// });
+
+	$('.subir').on('click', function(){
+		$('html, body').animate({scrollTop:0}, 'slow');
+	});
 		
 });
