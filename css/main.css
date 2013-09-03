@@ -1,6 +1,14 @@
-.row { background: white !important; }
+.row { background: white !important; margin-bottom: 100px; }
+.noBg { background: #f7f4ef !important; margin-top: -92px !important; }
+.social { float: right; margin-right: 20px; }
+.social p { font-family: 'Oswald', arial; float: left; font-size: 13px; font-weight: 400; color: #464646; }
+.social img { width: 24px; height: 20px; }
+.subir { float: right; cursor: pointer; }
+.bannerPH { float: left; margin-top: -8px; }
 
-#wrapper { padding: 0 15px; -webkit-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15) }
+
+
+#wrapper { padding: 0 15px; -webkit-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); -moz-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); }
 
 .top-bar-section ul li a {
   text-transform: uppercase;
