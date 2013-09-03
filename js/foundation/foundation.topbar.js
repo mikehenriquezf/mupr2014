@@ -82,7 +82,6 @@
           if (self.breakpoint()) {
             if (!self.rtl) {
               section.css({left: '0%'});
-              alert('boolm');
               section.find('>.name').css({left: '100%'});
             } else {
               section.css({right: '0%'});
