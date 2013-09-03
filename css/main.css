@@ -1,5 +1,7 @@
 .row { background: white !important; }
 
+#wrapper { padding: 0 15px; -webkit-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15) }
+
 .top-bar-section ul li a {
   text-transform: uppercase;
 }
