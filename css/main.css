@@ -20,7 +20,7 @@
 #slideshow .slider a#prev { left: 15px; background: url("../img/slider-prev.png")  no-repeat left top; }
 
 #slider-area { width: 1000px !important; height: 491px !important; }
-
+#slider-area > li { list-style: none; }
 
 .text-box { z-index: 999; position: absolute; left: 610px; top: 320px; width: 390px; height: 110px; min-height: 110px; padding: 15px; }
 
