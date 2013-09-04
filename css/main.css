@@ -10,14 +10,9 @@
 
 #wrapper { padding: 0 15px; -webkit-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); -moz-box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); box-shadow: 4px 0px 8px rgba(68,68,68,0.15), -4px 0px 8px rgba(68,68,68,0.15), 0px 4px 8px rgba(68,68,68,0.15); }
 
-.top-bar-section ul li a {
-  text-transform: uppercase;
-}
+.top-bar-section ul li a { text-transform: uppercase; }
 
-.top-bar-section ul li a:hover {
-  background-color: #512173 !important;
-  color: white;
-}
+.top-bar-section ul li a:hover { background-color: #512173 !important; color: white; }
 
 .esconde { display: none; }
 
@@ -91,3 +86,27 @@
 
 #video_thumbs_holder { padding-left: 42px; margin-top: 22px; margin-bottom: 30px; }
 #video_thumbs_holder p, #video_thumbs_holder a { font-family: georgia; font-size: 13px; font-weight: bold; font-style: italic; color: #404040; }
+
+
+/*PERFIL DE CANDIDATAS*/
+.volver a { text-decoration: underline; color: #512173; font-family: georgia; font-size: 18px; margin-left: 20px; }
+.volver img { margin-right: 15px; }
+.profile_candidata { margin: 20px; width: 960px; height: 500px; }
+.profile_title { margin-top: 20px; margin-left: 20px; }
+.profile_title div { height: 46px; }
+.nombre { background: #512173; font-family: georgia; font-style: italic; font-weight: bold; font-size: 21px; color: white; width: 300px; float: left; padding: 12px; }
+.pueblo { background: #efefef; font-family: 'Oswald', arial; font-weight: 300; font-size: 21px; color: #512173; width: 660px; float: left; padding: 12px; }
+.info_candidata { position: absolute; z-index: 2; margin-top: 70px; color: white; font-family: arial; font-size: 16px; margin-left: 10px; }
+.info_candidata p { line-height: 6px; }
+.info_candidata_background { z-index: 1; position: absolute; width: 300px; height: 500px; left: 0; margin-top: 46px; background: #512173; opacity: 0.5; }
+.extras { padding-left: 20px; margin-top: 46px; margin-bottom: 30px; }
+.left_column { float: left; width: 650px;  }
+.left_column hr { border-top: 1px dotted #b2b2b2;  height: 1px; margin: 0; }
+.left_column h3, .right_column h3 { margin-top: 11px; font-family: 'Oswald', arial; font-size: 16px; color: #464646; font-weight: 400; text-transform: uppercase;  }
+.right_column { float: right; width: 300px; }
+.galeria_candidatas { margin-top: 35px; }
+.galeria_share { margin: 15px 0 15px 0; }
+.votar { width: 300px; height: 69px; background: #522173 url(../img/votar_check.png) no-repeat 10px 15px; margin-top: 9px; display: block; }
+.votar p { font-family: 'Oswald', arial; font-weight: 400; font-size: 24px; color: white; text-transform: uppercase; padding: 17px 0 0 85px; }
+.publicidad_perfil { margin-top: 20px; }
+/*PERFIL DE CANDIDATAS*/
