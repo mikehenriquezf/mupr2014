@@ -16,12 +16,19 @@ $(document).ready(function (){
 	}
 
 
-	// $(window).scroll(function (){
-	// 	if($('.sticky').css('width') > '1000px'){
-	// 		$('.title-area .name').removeClass('esconde');
-	// 	}else{
-	// 		$('.title-area .name').addClass('esconde');
-	// 	}
-	// });
+	$(window).scroll(function (){
+		if($('.sticky').css('width') > '1000px'){
+			$('.name').html('<img src="img/logo_small_sticky_menu.png">');
+			$('.sticky').addClass('navShadow');
+		}else{
+			$('.name').html('');
+			$('.sticky').removeClass('navShadow');
+		}
+
+	});
+
+	$('.subir').on('click', function(){
+		$('html, body').animate({scrollTop:0}, 'slow');
+	});
 		
 });
