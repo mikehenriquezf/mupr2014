@@ -110,3 +110,14 @@
 .votar p { font-family: 'Oswald', arial; font-weight: 400; font-size: 24px; color: white; text-transform: uppercase; padding: 17px 0 0 85px; }
 .publicidad_perfil { margin-top: 20px; }
 /*PERFIL DE CANDIDATAS*/
+
+
+
+/*DIRECTORIO DE CANDIDATAS*/
+.candidata_thumb { width: 159px; height: 150px; float: left; margin: 10px; }
+.candidata_banner { position: absolute; width: 159px; height: 44px; background: #522173; color: white; z-index: 10; margin-top: -1px; padding: 5px; }
+.candidata_banner h4 { font-family: georgia; font-style: italic; font-weight: bold; color: white; font-size: 13px; margin: 0px; }
+.candidata_banner h5 { font-family: georgia; color: white; font-size: 12px; margin: 0px; }
+.noticias_widget { margin-top: 30px; }
+.publicidad_candidatas { margin-top: 10px; }
+/*DIRECTORIO DE CANDIDATAS*/
