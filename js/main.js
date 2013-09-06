@@ -13,7 +13,13 @@ $(document).ready(function (){
 		});
 	}
 
-
+	size_li = $("#thumbs li").size();
+    x=12;
+    $('#thumbs li:lt('+x+')').show();
+    $('#loadMore').click(function () {
+        x= (x+6 <= size_li) ? x+6 : size_li;
+        $('#thumbs li:lt('+x+')').show();
+    });
 
 
 

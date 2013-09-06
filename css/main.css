@@ -110,3 +110,33 @@
 .votar p { font-family: 'Oswald', arial; font-weight: 400; font-size: 24px; color: white; text-transform: uppercase; padding: 17px 0 0 85px; }
 .publicidad_perfil { margin-top: 20px; }
 /*PERFIL DE CANDIDATAS*/
+
+
+
+/*DIRECTORIO DE CANDIDATAS*/
+.candidata_thumb { width: 159px; height: 150px; float: left; margin: 10px; }
+.candidata_banner { position: absolute; width: 159px; height: 44px; background: #522173; color: white; z-index: 10; margin-top: -1px; padding: 5px; }
+.candidata_banner h4 { font-family: georgia; font-style: italic; font-weight: bold; color: white; font-size: 13px; margin: 0px; }
+.candidata_banner h5 { font-family: georgia; color: white; font-size: 12px; margin: 0px; }
+.noticias_widget { margin-top: 30px; }
+.publicidad_candidatas { margin-top: 10px; }
+.twitter_widget_directorio { margin-top: 30px; }
+/*DIRECTORIO DE CANDIDATAS*/
+
+
+
+/*VIDEOS*/
+#video_holder { width: 940px; height: auto; margin: 30px auto; }
+.video_title_ { margin: 0 auto; padding-left: 30px; margin-bottom: 20px; }
+.video_title_ p { margin-top: -8px; font-family: georgia; font-size: 14px; }
+#videos_social_ { margin-top: -20px; padding-left: 30px; margin-bottom: 20px; }
+.textLightVideos { font-family: 'Oswald', arial; font-weight: 300; font-size: 24px; color: #512173; margin-left: 15px; }
+.sponsors_videos { position: absolute; width: 175px; height: 47px; top: -10px; left: 794px; }
+#thumbs { margin-top: 10px; }
+#thumbs .video_thumb:last-child { margin-right: 290px; }
+#thumbs li { list-style: none; display: none; }
+#thumbs li p, #thumbs li a { font-family: georgia; font-size: 13px; font-weight: bold; font-style: italic; color: #404040; }
+#loadMore { float: right; margin-top: 20px;  margin-right: 120px; font-family: georgia; font-size: 12px; color: #5f377d; font-style: italic; font-weight: bold; text-decoration: underline; }
+#loadMoreNota { float: right; margin-top: -30px;  margin-right: 40px; font-family: georgia; font-size: 12px; font-style: italic; font-weight: bold; text-decoration: underline; }
+#loadMoreNota a { color: #5f377d; }
+/*VIDEOS*/
