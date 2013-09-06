@@ -122,3 +122,14 @@
 .publicidad_candidatas { margin-top: 10px; }
 .twitter_widget_directorio { margin-top: 30px; }
 /*DIRECTORIO DE CANDIDATAS*/
+
+
+
+/*VIDEOS*/
+#video_holder { width: 940px; height: auto; margin: 30px auto; }
+.video_title_ { margin: 0 auto; padding-left: 30px; margin-bottom: 20px; }
+.video_title_ p { margin-top: -8px; font-family: georgia; font-size: 14px; }
+#videos_social_ { margin-top: -20px; padding-left: 30px; margin-bottom: 20px; }
+.textLightVideos { font-family: 'Oswald', arial; font-weight: 300; font-size: 24px; color: #512173; margin-left: 15px; }
+.sponsors_videos { position: absolute; width: 175px; height: 47px; top: -10px; left: 794px; }
+/*VIDEOS*/
