@@ -96,8 +96,10 @@
 .profile_title div { height: 46px; }
 .nombre { background: #512173; font-family: georgia; font-style: italic; font-weight: bold; font-size: 21px; color: white; width: 300px; float: left; padding: 12px; }
 .pueblo { background: #efefef; font-family: 'Oswald', arial; font-weight: 300; font-size: 21px; color: #512173; width: 660px; float: left; padding: 12px; }
-.info_candidata { position: absolute; z-index: 2; margin-top: 70px; color: white; font-family: arial; font-size: 16px; margin-left: 10px; }
-.info_candidata p { line-height: 6px; }
+/*.info_candidata { position: absolute; z-index: 2; margin-top: 70px; color: white; font-family: arial; font-size: 16px; margin-left: 10px; }*/
+.info_candidata { position: absolute; z-index: 2; margin-top: 70px; color: white; font-family: arial; font-size: 16px; margin-left: 10px; width: 280px; }
+/*.info_candidata p { line-height: 6px; }*/
+.info_candidata p { line-height: 20px; }
 .info_candidata_background { z-index: 1; position: absolute; width: 300px; height: 500px; left: 0; margin-top: 46px; background: #512173; opacity: 0.5; }
 .extras { padding-left: 20px; margin-top: 46px; margin-bottom: 30px; }
 .left_column { float: left; width: 650px;  }
@@ -117,6 +119,7 @@
 .candidata_thumb { width: 159px; height: 150px; float: left; margin: 10px; }
 .candidata_banner { position: absolute; width: 159px; height: 44px; background: #522173; color: white; z-index: 10; margin-top: -1px; padding: 5px; }
 .candidata_banner h4 { font-family: georgia; font-style: italic; font-weight: bold; color: white; font-size: 13px; margin: 0px; }
+
 .candidata_banner h5 { font-family: georgia; color: white; font-size: 12px; margin: 0px; }
 .noticias_widget { margin-top: 30px; }
 .publicidad_candidatas { margin-top: 10px; }
