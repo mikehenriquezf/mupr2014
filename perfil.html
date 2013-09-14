@@ -98,7 +98,26 @@
 					<h3>Video entrevista</h3>
 					
 
-					<img src="img/videoplayer.jpg">
+					<!--<img src="img/videoplayer.jpg">-->
+                    
+                    
+<!-- Sample JS embed with smaller player and video auto-start and current URL as Share URL -->
+<div id="embedPlayer"></div> 
+<script type="text/javascript">
+    var videoPlayer = videoPlayer || [];
+    videoPlayer['embedPlayer'] = {
+        videoID: 150682,
+        videoWidth: 650,
+        videoHeight: 366,
+		videoResponsive: true,
+        videoPublisher: 'primerahora',
+        videoAutoStart: false,
+        videoShareURL: window.location.href.split('?')[0]
+    };
+</script>
+<script type="text/javascript" src="http://assets.video.gfrmedia.com/assets/embed/embed-lib.js"></script>
+ 
+                    
 
 					<div class="galeria_candidatas">
 						<h3>Fotogaleria</h3>

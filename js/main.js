@@ -13,6 +13,7 @@ $(document).ready(function (){
 		});
 	}
 
+
 	size_li = $("#thumbs li").size();
     x=12;
     $('#thumbs li:lt('+x+')').show();
