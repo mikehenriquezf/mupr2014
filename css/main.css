@@ -43,6 +43,7 @@
 .textLight { font-family: 'Oswald', arial; font-weight: 300; font-size: 40px; color: #512173; }
 .textBold { font-family: 'Oswald', arial; font-weight: 700; font-size: 40px; color: #b5a8c1; }
 .module_title { background: #512173; font-family: "Oswald", arial; font-weight: 400; font-size: 21px; color: white; width: 640px; height: 45px; /*text-align: center;*/ padding: 10px; }
+.module_title2 { background: #512173; font-family: "Oswald", arial; font-weight: 400; font-size: 21px; color: white; width: 300px; height: 45px; /*text-align: center;*/ padding: 10px; }
 
 #noticias_modules { margin-top: 20px; }
 
@@ -63,6 +64,7 @@
 
 
 #noticias_content { height: 370px; width: 640px; background: #efefef; border-bottom: 5px solid #512173; border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; overflow-y: scroll; }
+#noticias_content2 { height: 370px; width: 300px; background: #efefef; border-bottom: 5px solid #512173; border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; overflow-y: scroll; }
 #noticias_entries img { float: left; margin-right: 10px; }
 #noticias_entries li { list-style: none; padding: 5px; border-bottom: 1px solid #e2e2e2; font-family: georgia; font-size: 14px; color: #585858; display: inline-block; width: 100%; }
 .fecha { margin: 0; font-weight: 800; font-style: italic; font-size: 12px;  }
@@ -121,7 +123,6 @@
 .candidata_thumb { width: 159px; height: 150px; float: left; margin: 10px; }
 .candidata_banner { position: absolute; width: 159px; height: 44px; background: #522173; color: white; z-index: 10; margin-top: -1px; padding: 5px; }
 .candidata_banner h4 { font-family: georgia; font-style: italic; font-weight: bold; color: white; font-size: 13px; margin: 0px; }
-
 .candidata_banner h5 { font-family: georgia; color: white; font-size: 12px; margin: 0px; }
 .noticias_widget { margin-top: 30px; }
 .publicidad_candidatas { margin-top: 10px; }
