@@ -1,0 +1,207 @@
+{
+    "candidatas": [
+        {
+            "city": "Añasco",
+            "name": "Stephanie Soto",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-anasco/",
+            "path": "anasco"
+        },
+        {
+            "city": "Arecibo",
+            "name": "Suzette Rivera",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-arecibo/",
+            "path": "arecibo"
+        },
+        {
+            "city": "Bayamón",
+            "name": "Aleyda Ort&iacute;z",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-bayamon/",
+            "path": "bayamon"
+        },
+        {
+            "city": "Cabo Rojo",
+            "name": "Zamira Mendoza",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-caborojo/",
+            "path": "caborojo"
+        },
+        {
+            "city": "Caguas",
+            "name": "Kristal De Jes&uacute;s",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-caguas/",
+            "path": "caguas"
+        },
+        {
+            "city": "Camuy",
+            "name": "Mar&iacute;a Isabel V&eacute;lez",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-camuy/",
+            "path": "camuy"
+        },
+        {
+            "city": "Carolina",
+            "name": "Linoshka Castro",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-carolina/",
+            "path": "carolina"
+        },
+        {
+            "city": "Cayey",
+            "name": "Patricia Qui&ntilde;ones",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-cayey/",
+            "path": "cayey"
+        },
+        {
+            "city": "Ceiba",
+            "name": "Krystal Lee P&eacute;rez",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-ceiba/",
+            "path": "ceiba"
+        },
+        {
+            "city": "Cidra",
+            "name": "Lourel Vivoni",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-cidra/",
+            "path": "cidra"
+        },
+        {
+            "city": "Dorado",
+            "name": "Kristhielee Y. Caride",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-dorado/",
+            "path": "dorado"
+        },
+        {
+            "city": "Fajardo",
+            "name": "Julimar T. Santiago",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-fajardo/",
+            "path": "fajardo"
+        },
+        {
+            "city": "Guaynabo",
+            "name": "Kimberly Garc&iacute;a",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-guaynabo/",
+            "path": "guaynabo"
+        },
+        {
+            "city": "Hatillo",
+            "name": "Carla M. Harrison",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-hatillo/",
+            "path": "hatillo"
+        },
+        {
+            "city": "Juana Díaz",
+            "name": "Alexandra Porrata",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-juanadiaz/",
+            "path": "juanadiaz"
+        },
+        {
+            "city": "Luquillo",
+            "name": "Mar&iacute;a Rivera",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-luquillo/",
+            "path": "luquillo"
+        },
+        {
+            "city": "Mayagüez",
+            "name": "Alexandra Alema&ntilde;y",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-mayaguez/",
+            "path": "mayaguez"
+        },
+        {
+            "city": "Morovis",
+            "name": "Luz Johanna Rivera",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-morovis/",
+            "path": "morovis"
+        },
+        {
+            "city": "Orocovis",
+            "name": "Irmalis Rodr&iacute;guez",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-orocovis/",
+            "path": "orocovis"
+        },
+        {
+            "city": "Ponce",
+            "name": "Shantal Y. Gonz&aacute;lez",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-ponce/",
+            "path": "ponce"
+        },
+        {
+            "city": "Río Grande",
+            "name": "Larissa Santiago",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-riogrande/",
+            "path": "riogrande"
+        },
+        {
+            "city": "Salinas",
+            "name": "Natasha Romero",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-salinas/",
+            "path": "salinas"
+        },
+        {
+            "city": "San Juan",
+            "name": "Larissa Dones",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-sanjuan/",
+            "path": "sanjuan"
+        },
+        {
+            "city": "Toa Alta",
+            "name": "Ethelin Tort",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-toaalta/",
+            "path": "toaalta"
+        },
+        {
+            "city": "Toa Baja",
+            "name": "Gabriela Berr&iacute;os",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-toabaja/",
+            "path": "toabaja"
+        },
+        {
+            "city": "Trujillo Alto",
+            "name": "Diandra Nieves",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-trujilloalto/",
+            "path": "trujilloalto"
+        },
+        {
+            "city": "Utuado",
+            "name": "Natalie Maldonado",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-utuado/",
+            "path": "utuado"
+        },
+        {
+            "city": "Vega Alta",
+            "name": "Weadaleth Albarr&aacute;n",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-vegaalta/",
+            "path": "vegaalta"
+        },
+        {
+            "city": "Yabucoa",
+            "name": "Tershya Soto",
+            "thumb": "thumb.jpg",
+            "link": "/perfil-yabucoa/",
+            "path": "yabucoa"
+        }
+    ]
+}

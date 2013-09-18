@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/main.css">
   
   <!-- JAVASCRIPT -->
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="js/vendor/custom.modernizr.js"></script>
 
 </head>
@@ -59,8 +60,41 @@
 		</div>
 		
 
-		<div class="row" style="margin-left: 85px;">
-			<iframe src="https://manage.snapapp.com/preview_app/5201531f10ee1a4b6a000013" width="810" height="1900" frameborder="0" scrolling="no" ></iframe>
+		<div class="row">
+			<div id="voto_header">
+				<h3>La candidata Primera Hora</h3>
+				<p>Elige la candidata de Primera Hora, ustedes deciden quien pasará a la final.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="mas_videos_title" class="large-12">
+				<span class="textLight">Candidatas</span>
+			</div>
+		</div>
+
+		<div class="row" id="vote_candidatas">
+			
+
+			<script type="text/javascript">
+
+
+				$.getJSON("candidatas.json", function(data){
+			
+				    $.each(data, function (index, value) {
+				        for (var i = 0; i < value.length; i++){
+				        	// console.log(value[i].city);	
+				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><a href="perfil.html"><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
+				        }
+				        
+				    });
+			
+				});
+			
+
+			</script>
+
+
 		</div>
 
 
