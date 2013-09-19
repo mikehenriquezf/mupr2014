@@ -91,7 +91,7 @@
 				    $.each(data, function (index, value) {
 				        for (var i = 0; i < value.length; i++){
 				        	// console.log(value[i].city);	
-				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><a href="perfil.html"><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
+				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><input type="hidden" class="pueblo" value="'+value[i].path+'"><a><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
 				        }
 				        
 				    });
