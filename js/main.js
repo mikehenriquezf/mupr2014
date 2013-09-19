@@ -22,7 +22,42 @@ $(document).ready(function (){
         $('#thumbs li:lt('+x+')').show();
     });
 
+    $('.vote_candidata_thumb').on('click', function (){
+    	var pueblo = $(this).children('.pueblo').val();
+    	console.log(pueblo);
+    	$('.overlay').css('opacity', 0);
+    	$('.registro_votar').css('opacity', 0);
+    	
+    	var dialogTop = ($(window).height() - $('.registro_votar').height() ) / 2 + $(window).scrollTop();
+		var dialogLeft = ($(window).width() - $('.registro_votar').width()) / 2 + $(window).scrollLeft(); 
 
+		
+		$('.overlay').show();
+		$('.registro_votar').css({top:dialogTop, left:dialogLeft}).show();
+
+		$('.overlay').fadeTo('slow', 0.9);
+		$('.registro_votar').fadeTo('slow', 1);
+
+    });
+
+    $('.registro_votar a').on('click', function(){
+    	
+		$('.registro_votar').fadeTo('fast', 0, function(){
+			$('.overlay').fadeTo('slow', 0, function (){
+				$('.registro_votar').hide();
+				$('.overlay').hide();
+			});
+
+		});
+    });
+
+    $(window).resize(function(){
+    	var dialogTop = ($(window).height() - $('.registro_votar').height() ) / 2 + $(window).scrollTop();
+		var dialogLeft = ($(window).width() - $('.registro_votar').width()) / 2 + $(window).scrollLeft(); 
+
+		$('.registro_votar').css({top:dialogTop, left:dialogLeft});
+
+    });
 
 
 	$(window).scroll(function (){
@@ -33,6 +68,11 @@ $(document).ready(function (){
 			$('.name').html('');
 			$('.sticky').removeClass('navShadow');
 		}
+
+		var dialogTop = ($(window).height() - $('.registro_votar').height() ) / 2 + $(window).scrollTop();
+		var dialogLeft = ($(window).width() - $('.registro_votar').width()) / 2 + $(window).scrollLeft(); 
+
+		$('.registro_votar').css({top:dialogTop, left:dialogLeft});
 
 	});
 
