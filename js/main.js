@@ -1,5 +1,7 @@
 $(document).ready(function (){
 
+	
+
 	// Slider
 	if ($('#slider-area').length) {
 		$('#slider-area').after('<div id="nav">') .cycle({ 
@@ -32,6 +34,7 @@ $(document).ready(function (){
 	var fblocation = '';
 
     $('.vote_candidata_thumb').on('click', function (){
+<<<<<<< HEAD
 		
     	pueblo = $(this).children('.pueblo').val();
     	console.log(pueblo);
@@ -95,6 +98,14 @@ $(document).ready(function (){
 		
 		// ---------------------------------------------------------------------------------------------------------------------------------------------------------
 		
+=======
+    	var pueblo = $(this).children('.pueblo').val();
+    	
+    	$('.registro_votar h2').html('Reg&iacute;strate antes de votar');
+		$('.registro_votar p').html('Para realizar tu voto necesitas autenticarte con Facebook');
+		$('.fb_connect').show();
+
+>>>>>>> 0a819ad75857b7148c534aa090ba749f3af26e26
     	$('.overlay').css('opacity', 0);
     	$('.registro_votar').css('opacity', 0);
     	
@@ -118,6 +129,7 @@ $(document).ready(function (){
 
     });
 
+<<<<<<< HEAD
 	$("#postButton").click(function(){  
 		
 		document.getElementById('postButton').innerHTML = 'Procesando... por favor espere';
@@ -188,17 +200,95 @@ $(document).ready(function (){
 
 		
 	});
+=======
+    $('.registro_votar img').on('click', function(){
+    	FB.login(function(response) {
+	        if (response.authResponse) {
+	            console.log('Authenticated!');
+	            checkUser();
+
+	        } else {
+	            console.log('User cancelled login or did not fully authorize.');
+	        }
+	    });
+
+
+    });
+
+	function checkUser() {
+
+		$('.fb_connect').hide();
+		$('.loading').show();
+
+		FB.api('/me', function(response) {
+			var fbid, name, email, gender, hometown, location;
+
+			fbid = response.id; //fbid
+			name = response.name; //n
+			email = response.email; //e
+			gender = response.gender; //g
+			hometown = response.hometown.name; //ht
+			location = response.location.name; //loc
+
+			$.ajax({
+				type: "GET",
+				url: "db_handler.php",
+				data: "fbid="+fbid+"&n="+name+"&e="+email+"&g="+gender+"&ht="+hometown+"&loc="+location,
+				success: function(status){
+					// console.log("fbid="+fbid+"&n="+name+"&e="+email+"&g="+gender+"&ht="+hometown+"&loc="+location);
+					if(status == 1){
+						document.cookie= "vote_status=voted";
+						$('.registro_votar').fadeTo('fast', 0, function(){
+							$('.overlay').fadeTo('slow', 0, function (){
+								$('.registro_votar').hide();
+								$('.overlay').hide();
+
+								// Show results
+								$('.textLight').html('Resultado de votaciones').css({'margin-left':'290px'});
+								$('#vote_candidatas').fadeTo('slow', 0, function(){
+									$('#vote_candidatas').hide();
+									$('#results_candidatas').show().css('opacity', 0);
+									$('#results_candidatas').fadeTo('slow', 1);	
+								});
+								
+							});
+						});
+					}else{
+						document.cookie= "vote_status=voted";
+
+						$('.loading').fadeTo('slow', 0, function(){
+							$('.loading').hide();
+						});
+						$('.registro_votar h2').html('Lo sentimos...');
+						$('.registro_votar p').html('Ya usted excedió la cantidad de votos permitidos.');
+					}	
+				}
+			});
+		});
+	}
+
+>>>>>>> 0a819ad75857b7148c534aa090ba749f3af26e26
 
     $('.registro_votar a').on('click', function(){
-    	
+    	voted_status = getCookie("vote_status");
+
+    	if(voted_status == 'voted'){
+    		$('.textLight').html('Resultado de votaciones').css({'margin-left':'290px'});
+    		$('#vote_candidatas').hide();
+    		$('#results_candidatas').show();
+    	}
+
+    	// CERRAR MODAL
 		$('.registro_votar').fadeTo('fast', 0, function(){
 			$('.overlay').fadeTo('slow', 0, function (){
 				$('.registro_votar').hide();
 				$('.overlay').hide();
 			});
-
 		});
     });
+
+    
+
 
     $(window).resize(function(){
     	var dialogTop = ($(window).height() - $('.registro_votar').height() ) / 2 + $(window).scrollTop();
@@ -230,3 +320,7 @@ $(document).ready(function (){
 	});
 		
 });
+
+
+
+
