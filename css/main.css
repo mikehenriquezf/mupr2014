@@ -176,7 +176,7 @@
 .total_votos { float: right; margin-top: -34px; margin-right: -114px; font-family: 'Oswald', arial; font-weight: 400; color: #512173; font-size: 34px; text-align: left; width: 100px; }
 
 #results_shares { margin-bottom: 80px; }
-.progressbar { background: #512173; height: 100%; }
+.progressbar { background: #512173; height: 100%; -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; -ms-transition: all 0.5s ease-out; -o-transition: all 0.5s ease-out; transition: all 0.5s ease-out; }
 /*VOTACIONES*/
 
 
