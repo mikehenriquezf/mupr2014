@@ -18,14 +18,49 @@
   <!-- JAVASCRIPT -->
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="js/vendor/custom.modernizr.js"></script>
-
+  <script type="text/javascript">
+  function getCookie(c_name) {
+		var c_value = document.cookie;
+		var c_start = c_value.indexOf(" " + c_name + "=");
+		if (c_start == -1)
+		  {
+		  c_start = c_value.indexOf(c_name + "=");
+		  }
+		if (c_start == -1)
+		  {
+		  c_value = null;
+		  }
+		else
+		  {
+		  c_start = c_value.indexOf("=", c_start) + 1;
+		  var c_end = c_value.indexOf(";", c_start);
+		  if (c_end == -1)
+		  {
+		c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+		}
+		return c_value;
+	}
+  
+  </script>
 </head>
 <body>
+<div id="fb-root"></div>
 <div class="overlay"></div>
 <div class="registro_votar">
-	<h2>Reg&iacute;strate antes de votar</h2>
-	<p>Para realizar tu voto necesitas autenticarte con Facebook</p>
-	<img src="img/fb_connect.png">
+	
+	<!-- Values for H2 and P are set in main.js -->
+	<h2></h2>
+	<p></p>
+	<!-- Values for H2 and P are set in main.js -->
+
+	<div class="fb_connect">
+		<img src="img/fb_connect.png">
+	</div>
+	<div class="loading">
+		<img src="img/orig-loading.gif">
+	</div>
 	<a>Cerrar</a>
 
 </div>
@@ -81,25 +116,41 @@
 		</div>
 
 		<div class="row" id="vote_candidatas">
-			
-
 			<script type="text/javascript">
-
-
 				$.getJSON("candidatas.json", function(data){
-			
 				    $.each(data, function (index, value) {
 				        for (var i = 0; i < value.length; i++){
 				        	// console.log(value[i].city);	
 				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><input type="hidden" class="pueblo" value="'+value[i].path+'"><a><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
 				        }
-				        
 				    });
-			
 				});
-			
-
 			</script>
+		</div>
+		<div class="row" id="results_candidatas">
+			<div id="results_shares">Aqui van los shares</div>
+			<div class="resultados_total_votos"><p>Votos</p></div>
+
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Carolina</p></div>
+				<div class="progressbar" style="width: 10%;"></div>
+				<div class="total_votos">198</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>San Juan</p></div>
+				<div class="progressbar" style="width: 30%;"></div>
+				<div class="total_votos">681</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Bayamon</p></div>
+				<div class="progressbar" style="width: 85%;"></div>
+				<div class="total_votos">800</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Utuado</p></div>
+				<div class="progressbar" style="width: 50%;"></div>
+				<div class="total_votos">615</div>
+			</div>
 
 
 		</div>
@@ -173,6 +224,39 @@
   
   -->
   
+
+  <!-- FBConnect -->
+  <script>
+  window.fbAsyncInit = function() {
+	  FB.init({
+	    appId      : '400366420071587', // App ID
+	    channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+	    status     : true, // check login status
+	    cookie     : true, // enable cookies to allow the server to access the session
+	    xfbml      : true  // parse XFBML
+	  });
+	};
+  // Load the SDK asynchronously
+  (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/en_US/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+
+  
+  	var voted_status = getCookie("vote_status");
+
+	if(voted_status == 'voted'){
+		$('.textLight').html('Resultado de votaciones').css({'margin-left':'290px'});
+		$('#vote_candidatas').hide();
+		$('#results_candidatas').show();
+	}
+  	
+  
+</script>
+
   <script>
     $(document).foundation();
   </script>
