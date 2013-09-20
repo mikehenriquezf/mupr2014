@@ -23,89 +23,14 @@ $(document).ready(function (){
         x= (x+6 <= size_li) ? x+6 : size_li;
         $('#thumbs li:lt('+x+')').show();
     });
-	
-	//DECLARE VARS
-	var pueblo = '';
-	var fbid = '';
-	var fbname = '';
-	var fbemail = '';
-	var fbgender = '';
-	var fbhometown = '';
-	var fblocation = '';
 
     $('.vote_candidata_thumb').on('click', function (){
-<<<<<<< HEAD
-		
-    	pueblo = $(this).children('.pueblo').val();
-    	console.log(pueblo);
-		
-		// ---------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        // listen for and handle auth.statusChange events
-        FB.Event.subscribe('auth.statusChange', function (response) {
-			
-		if(response.status == 'connected') {	
-			
-            if (response.authResponse) {
-                // user has auth'd your app and is logged into Facebook
-                FB.api('/me', function (me) {
-                    if (me.name) {
-
-                        fbid = me.id;
-                        fbname = me.name;
-                        fbemail = me.email;
-                        fbgender = me.gender;
-						if (me.hometown) {
-							fbhometown = me.hometown.name;
-						}
-						if (me.location) {
-							fblocation = me.location.name;
-						}
-
-                        //document.getElementById('auth-displayname').innerHTML = fbname;
-                        //document.getElementById('auth-email').innerHTML = fbemail;
-                        //document.getElementById('auth-id').innerHTML = fbid;
-                        //document.getElementById('auth-gender').innerHTML = fbgender;
-                        //document.getElementById('auth-hometown').innerHTML = fbhometown;
-                        //document.getElementById('auth-location').innerHTML = fblocation;
-						
-						//document.getElementById('modalHead2').innerHTML = 'Listo! Tu voto fue enviado exitosamente.';
-						//document.getElementById('modalP2').innerHTML = 'Gracias por participar en la selección de<br />Miss Primera Hora de MUPR 2014';
-						
-						document.getElementById('modalHead2').innerHTML = 'Confirmar voto por Miss ' + pueblo;
-						document.getElementById('modalP2').innerHTML = '';
-
-                    }
-                })
-                document.getElementById('auth-loggedout').style.display = 'none';
-                document.getElementById('auth-loggedin').style.display = 'block';
-				//document.getElementById('modalHead2').innerHTML = 'Confirmar voto por Miss ' + pueblo;
-            } else {
-                // user has not auth'd your app, or is not logged into Facebook
-                document.getElementById('auth-loggedout').style.display = 'block';
-                document.getElementById('auth-loggedin').style.display = 'none';
-				document.getElementById('modalHead2').innerHTML = 'Hubo un error';
-				document.getElementById('modalP2').innerHTML = 'Error: necesitas autorizar<br />este app para poder votar';
-            }
-			
-		}
-			
-        });
-
-        $("#auth-logoutlink").click(function () { FB.logout(function () { window.location.reload(); }); });
-		$("#resultslink").click(function () { window.location.replace("resultados.html"); });
-
-		
-		// ---------------------------------------------------------------------------------------------------------------------------------------------------------
-		
-=======
     	var pueblo = $(this).children('.pueblo').val();
     	
     	$('.registro_votar h2').html('Reg&iacute;strate antes de votar');
 		$('.registro_votar p').html('Para realizar tu voto necesitas autenticarte con Facebook');
 		$('.fb_connect').show();
 
->>>>>>> 0a819ad75857b7148c534aa090ba749f3af26e26
     	$('.overlay').css('opacity', 0);
     	$('.registro_votar').css('opacity', 0);
     	
@@ -118,89 +43,9 @@ $(document).ready(function (){
 
 		$('.overlay').fadeTo('slow', 0.9);
 		$('.registro_votar').fadeTo('slow', 1);
-		
-		
-		FB.getLoginStatus(function(response) {
-			if (response.status === 'connected') {
-				document.getElementById('modalHead2').innerHTML = 'Confirmar voto por Miss ' + pueblo;
-				document.getElementById('modalP2').innerHTML = '';
-			}
-		});
 
     });
 
-<<<<<<< HEAD
-	$("#postButton").click(function(){  
-		
-		document.getElementById('postButton').innerHTML = 'Procesando... por favor espere';
-		document.getElementById('postResponse').innerHTML = 'Procesando... por favor espere';
-		
-		//DEBUG ALERT/LOG
-		//alert('user clicked on post div.\n\nfbid: ' + fbid + '\nfbname: ' + fbname + '\nfbemail: ' + fbemail + '\nvoteFor: ' + pueblo);
-		console.log('event: user clicked on post div.\n\nfbid: ' + fbid + '\nfbname: ' + fbname + '\nfbemail: ' + fbemail + '\nvoteFor: ' + pueblo);
-		
-		var formData = 'n='  + fbname + '&e=' + fbemail + '&fbid=' + fbid + '&g=' + fbgender + '&ht=' + fbhometown + '&loc=' + fblocation + '&v=' + pueblo + '&submit=true'; //Name value Pair
-		console.log(formData);
-
-		/*
-		$.post("http://localhost:65229/submitVote.aspx", formData, function (data, textStatus, jqXHR) {
-				//data - response from server
-				//alert(textStatus + ': ' + data);
-				console.log(textStatus + ': ' + data);
-			}).fail(function (jqXHR, textStatus, errorThrown) {
-				alert(textStatus);
-				console.log(textStatus);
-		});
-		*/
-		
-		$.post("submitVote.php", formData, function (data, textStatus, jqXHR) {
-			
-				//data - response from server
-				//alert(textStatus + ': ' + data);
-				console.log('success|textStatus: '+textStatus + '|data: ' + data);
-				
-				if (data==1) {
-					
-					document.getElementById('postResponse').style.display = 'block';
-                	document.getElementById('postButton').style.display = 'none';
-					
-					document.getElementById('closeLink').style.display = 'none';
-					document.getElementById('auth-logoutlink').style.display = 'block';
-					
-					document.getElementById('modalHead2').innerHTML = '&iexcl;Confirmado!';
-					document.getElementById('postResponse').innerHTML = 'Su voto fue confirmado. Gracias por participar.';
-					
-				} else if (data==0) {
-					
-					document.getElementById('postResponse').style.display = 'block';
-                	document.getElementById('postButton').style.display = 'none';
-					
-					document.getElementById('closeLink').style.display = 'block';
-					document.getElementById('auth-logoutlink').style.display = 'none';
-					
-					document.getElementById('modalHead2').innerHTML = '&iexcl;Este voto no es elegible!';
-					document.getElementById('postResponse').innerHTML = 'Su voto no fue añadido. Solo se<br />acepta una participación por usuario.';
-					
-				}
-				
-				
-			}).fail(function (jqXHR, textStatus, errorThrown) {
-				
-				//alert(textStatus);
-				console.log('fail|textStatus: '+textStatus);
-				document.getElementById('postResponse').style.display = 'block';
-               	document.getElementById('postButton').style.display = 'none';
-				document.getElementById('modalHead2').innerHTML = '&iexcl;Hubo un error!';
-				document.getElementById('postResponse').innerHTML = 'Hubo un problema enviando su voto ... el voto no fue añadido. Por favor trate nuevamente.';
-				
-		});
-		
-		
-		
-
-		
-	});
-=======
     $('.registro_votar img').on('click', function(){
     	FB.login(function(response) {
 	        if (response.authResponse) {
@@ -267,7 +112,6 @@ $(document).ready(function (){
 		});
 	}
 
->>>>>>> 0a819ad75857b7148c534aa090ba749f3af26e26
 
     $('.registro_votar a').on('click', function(){
     	voted_status = getCookie("vote_status");

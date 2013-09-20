@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Foundation 4</title>
+
+  
+  <!-- GOOGLE FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- JAVASCRIPT -->
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script type="text/javascript">
+  function getCookie(c_name) {
+		var c_value = document.cookie;
+		var c_start = c_value.indexOf(" " + c_name + "=");
+		if (c_start == -1)
+		  {
+		  c_start = c_value.indexOf(c_name + "=");
+		  }
+		if (c_start == -1)
+		  {
+		  c_value = null;
+		  }
+		else
+		  {
+		  c_start = c_value.indexOf("=", c_start) + 1;
+		  var c_end = c_value.indexOf(";", c_start);
+		  if (c_end == -1)
+		  {
+		c_end = c_value.length;
+		}
+		c_value = unescape(c_value.substring(c_start,c_end));
+		}
+		return c_value;
+	}
+  
+  </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<div class="overlay"></div>
+<div class="registro_votar">
+	
+	<!-- Values for H2 and P are set in main.js -->
+	<h2></h2>
+	<p></p>
+	<!-- Values for H2 and P are set in main.js -->
+
+	<div class="fb_connect">
+		<img src="img/fb_connect.png">
+	</div>
+	<div class="loading">
+		<img src="img/orig-loading.gif">
+	</div>
+	<a>Cerrar</a>
+
+</div>
+<div class="row">	
+	<div id="wrapper">
+		<div class="row">
+			<div class="large-12">
+				<img src="img/top_header.jpg">
+			</div>
+		</div>
+
+		<div class="row milPixels">
+			<div class="sticky large-12">
+				<nav class="top-bar">
+					<ul class="title-area">
+						<li class="name"></li>
+						<li class="toggle-topbar menu-icon">
+							<a href="#"><span>Men&uacute;</span></a>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+							
+							<li><a href="index.html">Portada</a></li>
+							<li class="divider"></li>
+							<li><a href="candidatas.html">Candidatas</a></li>
+							<li class="divider"></li>
+							<li class="active"><a href="vota.html">Vota</a></li>
+							<li class="divider"></li>
+							<li><a href="video.html">Video</a></li>
+							<li class="divider"></li>
+							<li><a href="envivo.html">En Vivo</a></li>
+							<li class="divider"></li>
+						</ul>
+					</section>
+				</nav>
+			</div>	
+		</div>
+		
+
+		<div class="row">
+			<div id="voto_header">
+				<h3>La candidata Primera Hora</h3>
+				<p>Elige la candidata de Primera Hora, ustedes deciden quien pasará a la final.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="mas_videos_title" class="large-12">
+				<span class="textLight more_left">Candidatas</span>
+			</div>
+		</div>
+
+		<div class="row" id="vote_candidatas">
+			<script type="text/javascript">
+				$.getJSON("candidatas.json", function(data){
+				    $.each(data, function (index, value) {
+				        for (var i = 0; i < value.length; i++){
+				        	// console.log(value[i].city);	
+				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><input type="hidden" class="pueblo" value="'+value[i].path+'"><a><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
+				        }
+				    });
+				});
+			</script>
+		</div>
+		<div class="row" id="results_candidatas">
+			<div id="results_shares">Aqui van los shares</div>
+			<div class="resultados_total_votos"><p>Votos</p></div>
+
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Carolina</p></div>
+				<div class="progressbar" style="width: 10%;"></div>
+				<div class="total_votos">198</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>San Juan</p></div>
+				<div class="progressbar" style="width: 30%;"></div>
+				<div class="total_votos">681</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Bayamon</p></div>
+				<div class="progressbar" style="width: 85%;"></div>
+				<div class="total_votos">800</div>
+			</div>
+			<div class="resultados">
+				<div class="resultados_pueblo"><p>Utuado</p></div>
+				<div class="progressbar" style="width: 50%;"></div>
+				<div class="total_votos">615</div>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+ </div>
+<div class="noBg row">
+	<div>
+		<div class="bannerPH">
+			<img src="img/especial_banner.png">
+		</div>
+		<div class="subir">
+			<img src="img/subir.png">
+		</div>
+		<div class="social">
+			<p>Compartelo</p>
+			<a href="#"><img src="img/facebook.png"></a>
+			<a href="#"><img src="img/twitter.png"></a>
+		</div>
+	</div>
+</div>
+
+	
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="js/jquery.cycle.js"></script>
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+  <script src="js/foundation/foundation.orbit.js"></script>
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+  
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  -->
+  
+
+  <!-- FBConnect -->
+  <script>
+  window.fbAsyncInit = function() {
+	  FB.init({
+	    appId      : '400366420071587', // App ID
+	    channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+	    status     : true, // check login status
+	    cookie     : true, // enable cookies to allow the server to access the session
+	    xfbml      : true  // parse XFBML
+	  });
+	};
+  // Load the SDK asynchronously
+  (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/en_US/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+
+  
+  	var voted_status = getCookie("vote_status");
+
+	if(voted_status == 'voted'){
+		$('.textLight').html('Resultado de votaciones').css({'margin-left':'290px'});
+		$('#vote_candidatas').hide();
+		$('#results_candidatas').show();
+	}
+  	
+  
+</script>
+
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
