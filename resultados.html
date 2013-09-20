@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Foundation 4</title>
+  <title>Resultados</title>
 
   
   <!-- GOOGLE FONTS -->
@@ -21,14 +21,7 @@
 
 </head>
 <body>
-<div class="overlay"></div>
-<div class="registro_votar">
-	<h2>Reg&iacute;strate antes de votar</h2>
-	<p>Para realizar tu voto necesitas autenticarte con Facebook</p>
-	<img src="img/fb_connect.png">
-	<a>Cerrar</a>
 
-</div>
 <div class="row">	
 	<div id="wrapper">
 		<div class="row">
@@ -69,8 +62,8 @@
 
 		<div class="row">
 			<div id="voto_header">
-				<h3>La candidata Primera Hora</h3>
-				<p>Elige la candidata de Primera Hora, ustedes deciden quien pasará a la final.</p>
+				<h3>La candidata Miss Primera Hora</h3>
+				<p>Resultados hasta el momento de la votación candidata de Primera Hora, ustedes deciden quien pasará a la final.</p>
 			</div>
 		</div>
 
@@ -83,24 +76,18 @@
 		<div class="row" id="vote_candidatas">
 			
 
+			Aqui el orden de las candidatas (por votos).
+
 			<script type="text/javascript">
-
-
 				$.getJSON("candidatas.json", function(data){
-			
 				    $.each(data, function (index, value) {
 				        for (var i = 0; i < value.length; i++){
-				        	// console.log(value[i].city);	
-				        	$("#vote_candidatas").append('<div class="vote_candidata_thumb"><input type="hidden" class="pueblo" value="'+value[i].path+'"><a><img src="img/candidatas/'+value[i].path+'/'+value[i].thumb+'"><div class="candidata_banner"><h4>'+value[i].city+'</h4></div><div class="candidata_banner_vota"><h4>HACER VOTO</h4></div></a></div>');
+				        	console.log(value[i].city);	
+				        	$("#vote_candidatas").append('<h4>'+(i+1)+') <a href="/perfil-'+value[i].path+'/">'+value[i].city+'</a></h4>');
 				        }
-				        
 				    });
-			
 				});
-			
-
 			</script>
-
 
 		</div>
 
@@ -136,39 +123,23 @@
   <script src="js/main.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/foundation/foundation.topbar.js"></script>
-  <script src="js/jquery.cycle.js"></script>
+
   <!--
-  
+  <script src="js/jquery.cycle.js"></script>  
   <script src="js/foundation/foundation.js"></script>
-  
   <script src="js/foundation/foundation.alerts.js"></script>
-  
   <script src="js/foundation/foundation.clearing.js"></script>
-  
   <script src="js/foundation/foundation.cookie.js"></script>
-  
   <script src="js/foundation/foundation.dropdown.js"></script>
-  
   <script src="js/foundation/foundation.forms.js"></script>
-  
   <script src="js/foundation/foundation.joyride.js"></script>
-  
   <script src="js/foundation/foundation.magellan.js"></script>
-  
   <script src="js/foundation/foundation.orbit.js"></script>
-  
   <script src="js/foundation/foundation.reveal.js"></script>
-  
   <script src="js/foundation/foundation.section.js"></script>
-  
   <script src="js/foundation/foundation.tooltips.js"></script>
-  
-  
-  
   <script src="js/foundation/foundation.interchange.js"></script>
-  
   <script src="js/foundation/foundation.placeholder.js"></script>
-  
   <script src="js/foundation/foundation.abide.js"></script>
   
   -->
@@ -176,5 +147,6 @@
   <script>
     $(document).foundation();
   </script>
+
 </body>
 </html>
